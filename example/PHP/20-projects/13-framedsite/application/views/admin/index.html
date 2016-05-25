@@ -1,0 +1,67 @@
+
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">站点概况</div>
+				  <div class="panel-body">
+				  	<table class="table table-striped">
+				  		<thead>
+				  			<tr>
+				  				<th width="30%">项目</th>
+				  				<th>值</th>
+				  			</tr>
+				  		</thead>
+				  		<tbody>
+				  			<tr>
+				  				<td>类型数量</td>
+				  				<td><?php echo $cate_nums; ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>网址数量</td>
+				  				<td><?php echo $site_nums; ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>用户数量</td>
+				  				<td><?php echo $user_nums; ?></td>
+				  			</tr>
+				  		</tbody>
+				  	</table>
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+				<div class="panel panel-default">
+				  <div class="panel-heading">站点环境</div>
+				  <div class="panel-body">
+				  	<table class="table table-striped">
+				  		<thead>
+				  			<tr>
+				  				<th width="30%">项目</th>
+				  				<th>值</th>
+				  			</tr>
+				  		</thead>
+				  		<tbody>
+				  			<tr>
+				  				<td>主机名称</td>
+				  				<td><?php echo $this->input->server('SERVER_NAME'); ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>主机地址</td>
+				  				<td><?php echo $this->input->server('SERVER_ADDR'); ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>主机环境</td>
+				  				<td><?php echo $this->input->server('SERVER_SOFTWARE'); ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>CodeIgnite版本</td>
+				  				<td><?php echo CI_VERSION; ?></td>
+				  			</tr>
+				  			<tr>
+				  				<td>MySQL版本</td>
+				  				<td><?php echo mysql_get_server_info(); ?></td>
+				  			</tr>
+				  		</tbody>
+				  	</table>
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+			</div><!-- end of .col-md-9 -->
+		</div><!-- end of .row -->
+	</div><!-- end of .containner -->

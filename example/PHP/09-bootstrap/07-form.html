@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- 优先使用IE最新版本和 Chrome -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- 360 浏览器内核控制 -->
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SEO 三项优化 -->
+	<!-- 页面描述 -->
+	<meta name="description" content="" />
+	<!-- 页面关键词 -->
+	<meta name="keywords" content=""/>
+	<!-- 页面标题 -->
+	<title>bootstrap中的表单样式</title>
+	<link rel="shortcut icon" href="docs-assets/ico/favicon.png">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<h1>bootstrap中的表单样式</h1>
+		<p>所有设置了<code>.form-control</code><code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>和<code>&lt;select&gt;</code>元素都将被默认设置为<code>width: 100%;</code>。将label和前面提到的这些控件包裹在<code>.form-group</code>中可以获得最好的排列。</p>
+		<form action="" role="form">
+			<input type="email" class="form-control" placeholder="请输入您的邮箱地址">
+			<span class="help-block">自己独占一行或多行的块级帮助文本。</span>
+			<input type="password" class="form-control" placeholder="请输入您的密码">
+		</form>
+		<form action="" role="form">
+			<div class="form-group">
+				<label for="inputEmail2">电子邮件</label>
+				<input type="email" class="form-control" id="inputEmail2" placeholder="请输入邮箱地址"></div>
+			<div class="form-group">
+				<label for="inputPassword2">密码</label>
+				<input type="password" class="form-control" id="inputPassword2" placeholder="请输入密码">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default">登录</button>
+		</form>
+		<h2>内联表单</h2>
+		<p><code>.form-inline</code>可使其内容左对齐并且表现为inline-block级别的控件。只适用于浏览器窗口至少在 768px 宽度时（窗口宽度再小的话就会使表单折叠）。</p>
+		<form action="" class="form-inline" role="form">
+			<select class="form-control">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<div class="form-group">
+				<label for="" class="sr-only">网站名称</label>
+				<input type="text" class="form-control" placeholder="网站名称">
+			</div>
+			<div class="form-group">
+				<label for="" class="sr-only">网站地址</label>
+				<input type="url" class="form-control" placeholder="网站地址">
+			</div>
+			<button type="submit" class="btn btn-default">添加</button>
+		</form>
+		<p class="alert alert-info" style="margin-top:10px;">
+			type可设置为text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel和color。bootstrap提供了内置的检查。
+		</p>
+		<h2>水平排列的表单</h2>
+		<p>通过为表单添加<code>.form-horizontal</code>，并使用Bootstrap预置的栅格class可以将label和控件组水平并排布局。这样做将改变<code>.form-group</code>的行为，使其表现为栅格系统中的行（row），因此就无需再使用<code>.row</code>了。</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-8">
+					<input type="email" class="form-control" id="inputEmail3" placeholder="Email"></div>
+				</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-8	">
+					<input type="password" class="form-control" id="inputPassword3" placeholder="Password"></div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-8 hidden-sm">
+					<button type="submit" class="btn btn-primary">Sign in</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>

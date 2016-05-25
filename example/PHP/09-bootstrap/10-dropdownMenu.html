@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- 优先使用IE最新版本和 Chrome -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- 360 浏览器内核控制 -->
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SEO 三项优化 -->
+	<!-- 页面描述 -->
+	<meta name="description" content="" />
+	<!-- 页面关键词 -->
+	<meta name="keywords" content=""/>
+	<!-- 页面标题 -->
+	<title>Bootstrap中的下拉菜单组件</title>
+	<link rel="shortcut icon" href="docs-assets/ico/favicon.png">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<h1>Bootstrap中的下拉菜单组件</h1>
+		<p class="alert alert-info">将下拉菜单触发器和下拉菜单都包裹在<code>.dropdown</code>里。通过向链接或按钮添加data-toggle="dropdown"可以打开或关闭下拉菜单。</p>
+
+		  <ul class="nav navbar-nav">
+		    <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+		      <!-- 通过向链接或按钮添加data-toggle="dropdown"可以打开或关闭下拉菜单。 -->
+		      <ul class="dropdown-menu">
+		        <li><a href="#">菜单项目1</a></li>
+		        <li><a href="#">菜单项目2</a></li>
+		        <li><a href="#">菜单项目3</a></li>
+		        <li class="divider"> </li>
+		        <li><a href="#">菜单项目4</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+
+		 <ul class="nav navbar-nav">
+		 	<li class="dropdown">
+		 		<!-- 触发器 -->
+		 		<a href="#" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+		 		<!-- 菜单项目 -->
+		 		<ul class="dropdown-menu">
+		 			<li><a href="#">菜单项目 1</a></li>
+		 			<li><a href="#">菜单项目 2</a></li>
+		 			<li><a href="#">菜单项目 3</a></li>
+		 			<li><a href="#">菜单项目 4</a></li>
+		 		</ul>
+		 	</li>
+		 </ul>
+
+	</div>	
+	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>

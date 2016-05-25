@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*初始化*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset,img{ border:0;}
+address,caption,cite,code,dfn,th,var{ font-style:normal; font-weight:normal;}
+ol,ul{ list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+q:before,q:after{ content:'';}
+abbr,acronym{ border:0;}
+
+/*清除浮动*/
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	font: 18px/1.8em '微软雅黑';
+}
+h1 {
+	color: green;
+	font-size: 32px;
+	font-weight: bold;
+}
+h2 {
+	border-bottom: 2px solid green;
+	line-height: 1.8em;
+	font-size: 24px;
+}
+p {
+	font-size:20px;
+	padding: 5px 0;
+}
+p.warning {
+	color: red;
+	background-color: yellow;
+	font-weight: bold;
+	margin-top: 15px;
+	padding: 10px;
+}
+.warning {
+	text-align: center;
+	margin-top: 60px;
+}
+#foot {
+	margin: 20px 0;
+}
+#foot p {
+	text-align: center;
+	font-size: 12px;
+	border-top: 1px solid green;
+}
+#foot p span {
+	margin: 0 20px;
+}

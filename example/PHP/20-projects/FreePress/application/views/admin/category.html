@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">目录编辑</div>
+    <div class="panel-body">
+      <form class="form-inline" role="form" method="POST" action="<?php echo site_url("/admin/category/addCategory"); ?>">
+        <div class="form-group">
+          <input type="text" class="form-control" name="categoryname" placeholder="请输入目录信息" required value="<?php echo set_value('categoryname'); ?>">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-saved"></span> 添加</button>
+                  <?php echo form_error('categoryname'); ?>
+      </form>
+
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr><th>序号</th><th>目录名称</th><th>父目录</th></tr>
+        </thead>
+        <tbody>
+          <?php foreach ($category as $item): ?>
+          <tr>
+            <td> <?php echo $item['cid']; ?></td>
+            <td> <?php echo $item['cname']; ?></td>
+            <td> <?php echo $item['cparent']; ?></td>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    <?php echo $this->pagination->create_links(); ?>
+  </div><!-- end of .panel-body -->
+</div><!-- end of .panel -->

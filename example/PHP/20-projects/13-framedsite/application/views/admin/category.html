@@ -1,0 +1,38 @@
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">网站类型</div>
+				  <div class="panel-body">
+				  	<form class="form-inline" role="form" method="POST" action="<?php echo site_url("/admin/add_cate"); ?>">
+				  		<div class="form-group">
+						  	<input type="text" class="form-control" name="sitetype" placeholder="请输入网站类型" required value="<?php echo set_value('sitetype'); ?>">	
+							</div>	
+							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-saved"></span> 添加</button>
+						</form>
+						<?php echo form_error('sitetype','<div class="alert alert-danger">', '</div>'); ?>
+			  	  <table class="table table-striped table-hover">
+			  	  	<thead>
+			  	  		<tr><th>序号</th><th>网站类型</th><th></th><th></th></tr>
+			  	  	</thead>
+			  	  	<tbody>
+			  	  		<?php foreach ($cate as $item): ?>
+			  	  		<tr>
+			  	  			<td><?php echo $item['cid'] ?></td>
+			  	  			<td><?php echo $item['type'] ?></td>
+			  	  			<td>
+			  	  				<a href="<?php echo site_url("/admin/del_cate/") . '/' . $item['cid']; ?>"><span class="glyphicon glyphicon-remove"></span> 删除</a>
+			  	  			</td>
+			  	  			<td>
+			  	  				<a href="<?php echo site_url("/admin/edit_cate/") . '/' . $item['cid']; ?>"><span class="glyphicon glyphicon-edit"></span> 修改</a>
+			  	  			</td>
+			  	  		</tr>
+			  	  		<?php endforeach; ?>
+			  	  	</tbody>
+			  	  </table>
+			  	 
+			  	  <!-- 分页 -->
+			  	  <?php echo $this->pagination->create_links(); ?>
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+			</div><!-- end of .col-md-9 -->
+		</div><!-- end of .row -->
+	</div><!-- end of .containner -->

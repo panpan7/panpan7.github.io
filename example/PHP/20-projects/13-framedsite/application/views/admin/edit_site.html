@@ -1,0 +1,29 @@
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">网址信息</div>
+				  <div class="panel-body">
+				  	<form method="POST" action="<?php echo site_url("/admin/update_site"); ?>" class="form-inline" role="form">
+				  		<input type="hidden" name="sid" value="<?php echo $site[0]['sid']; ?>">
+							<select class="form-control" name="sitetype" >
+								<?php foreach($sitetype as $item): ?>
+								<option value="<?php echo $item['cid']; ?>" <?php if($item['cid']==$site[0]['sitetype']) echo 'selected="selected"' ?>><?php echo $item['type'] ?></option>
+								<?php endforeach; ?>
+							</select>
+							<div class="form-group">
+								<label class="sr-only">网站名称</label>
+								<input type="text" class="form-control" name="siteinfo" placeholder="网站名称" required value="<?php echo $site[0]['siteinfo']; ?>">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">网站地址</label>
+								<input type="url" class="form-control" name="siteurl" placeholder="网站地址" required value="<?php echo $site[0]['siteurl']; ?>">
+							</div>
+							<button type="submit" class="btn btn-default">修改</button>
+					</form>
+					<?php echo form_error('siteinfo','<div class="alert alert-danger">', '</div>'); ?>
+					<?php echo form_error('siteurl','<div class="alert alert-danger">', '</div>'); ?>
+			  	  <!-- 分页 -->
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+			</div><!-- end of .col-md-9 -->
+		</div><!-- end of .row -->
+	</div><!-- end of .containner -->

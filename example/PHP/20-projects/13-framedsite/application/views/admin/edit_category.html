@@ -1,0 +1,16 @@
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">网站类型编辑</div>
+				  <div class="panel-body">
+				  	<form class="form-inline" role="form" method="POST" action="<?php echo site_url("/admin/update_cate"); ?>">
+				  		<div class="form-group">
+						  	<input type="text" class="form-control" name="sitetype" placeholder="请输入网站类型" required value="<?php echo $sitetype[0]['type']; ?>">
+						  	<input type="hidden" name="cid" value="<?php echo $sitetype[0]['cid']; ?>">	
+							</div>	
+							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-saved"></span> 更新</button>
+						</form>						
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+			</div><!-- end of .col-md-9 -->
+		</div><!-- end of .row -->
+	</div><!-- end of .containner -->

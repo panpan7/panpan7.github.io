@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>BMI自测工具</title>
+	</head>
+	<body>
+	<form method="post" action="03.php" >
+		<p>身高：<input type="text" name="height" />cm</p>
+		<p>体重：<input type="text" name='weight' />kg</p>
+		<input type="submit" value="提交"/>
+	</form>
+	<?php
+
+//Author : 西北民大杨志宏
+//Email : yangjh@yeah.net
+//采用知识共享“署名 3.0 中国大陆”许可协议授权
+
+// var_dump($_POST);
+
+echo "您的身高是" . $_POST["height"] ."cm";
+
+echo "<br />";
+$BMI = $_POST["weight"] / ($_POST["height"] * $_POST["height"])*10000;
+echo "您的BMI为" . round($BMI);
+?>
+	</body>
+</html>

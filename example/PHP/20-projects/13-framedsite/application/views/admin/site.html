@@ -1,0 +1,51 @@
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">网址信息</div>
+				  <div class="panel-body">
+				  	<form method="POST" action="<?php echo site_url("/admin/add_site"); ?>" class="form-inline" role="form">
+							<select class="form-control" name="sitetype" >
+								<?php foreach($sitetype as $item): ?>
+								<option value="<?php echo $item['cid'] ?>" <?php echo set_select('sitetype', $item['cid'])?> ><?php echo $item['type'] ?></option>
+								<?php endforeach; ?>
+							</select>
+							<div class="form-group">
+								<label class="sr-only">网站名称</label>
+								<input type="text" class="form-control" name="siteinfo" placeholder="网站名称" required value="<?php echo set_value('siteinfo') ?>">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">网站地址</label>
+								<input type="url" class="form-control" name="siteurl" placeholder="网站地址" required value="<?php echo set_value('siteurl') ?>">
+							</div>
+							<button type="submit" class="btn btn-default">添加</button>
+					</form>
+					<?php echo form_error('siteinfo','<div class="alert alert-danger">', '</div>'); ?>
+					<?php echo form_error('siteurl','<div class="alert alert-danger">', '</div>'); ?>
+			  	  <table class="table table-striped table-hover">
+			  	  	<thead>
+			  	  		<tr><th>序号</th><th>类型id</th><th>类型</th><th>名称</th><th>地址</th><th></th><th></th></tr>
+			  	  	</thead>
+			  	  	<tbody>
+			  	  		<?php foreach ($site as $item): ?>
+			  	  		<tr>
+			  	  			<td><?php echo $item['sid'] ?></td>
+			  	  			<td><?php echo $item['sitetype'] ?></td>
+			  	  			<td><?php echo $item['type'] ?></td>
+			  	  			<td><a href="<?php echo $item['siteurl'] ?>" target="_black"><?php echo $item['siteinfo'] ?></a></td>
+			  	  			<td><?php echo $item['siteurl'] ?></td>
+									<td>
+			  	  				<a href="<?php echo site_url("/admin/del_site/") . '/' . $item['sid']; ?>"><span class="glyphicon glyphicon-remove"></span> 删除</a>
+			  	  			</td>
+			  	  			<td>
+			  	  				<a href="<?php echo site_url("/admin/edit_site/") . '/' . $item['sid']; ?>"><span class="glyphicon glyphicon-edit"></span> 修改</a>
+			  	  			</td>
+			  	  		</tr>
+			  	  		<?php endforeach; ?>
+			  	  	</tbody>
+			  	  </table>			  	 
+			  	  <!-- 分页 -->
+			  	  <?php echo $this->pagination->create_links(); ?>
+				  </div><!-- end of .panel-body -->
+				</div><!-- end of .panel -->
+			</div><!-- end of .col-md-9 -->
+		</div><!-- end of .row -->
+	</div><!-- end of .containner -->

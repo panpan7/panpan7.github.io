@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>函数的不同调用方式</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+    function p(s) {
+        document.write("<p class='content'>" + s + "</p>");
+    }
+    function plus(a,b) {
+    	return a+b;
+    }
+    p(plus(1,2));
+    p(plus);
+	</script>
+</body>
+</html>
